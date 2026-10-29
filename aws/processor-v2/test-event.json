@@ -1,0 +1,11 @@
+{
+  "Records": [
+    {
+      "eventName": "ObjectCreated:Put",
+      "s3": {
+        "bucket": { "name": "biofastcheck-raw-data" },
+        "object": { "key": "v2-tests/good.fasta.txt", "eTag": "test-001" }
+      }
+    }
+  ]
+}

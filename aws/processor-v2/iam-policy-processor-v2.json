@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadUploadedFasta",
+      "Effect": "Allow",
+      "Action": ["s3:GetObject"],
+      "Resource": "arn:aws:s3:::biofastcheck-raw-data/*"
+    },
+    {
+      "Sid": "WriteResults",
+      "Effect": "Allow",
+      "Action": ["dynamodb:PutItem"],
+      "Resource": "arn:aws:dynamodb:eu-north-1:477213278851:table/BioFastCheckResults"
+    },
+    {
+      "Sid": "SendEmailReport",
+      "Effect": "Allow",
+      "Action": ["sns:Publish"],
+      "Resource": "REPLACE_WITH_YOUR_SNS_TOPIC_ARN"
+    }
+  ]
+}
